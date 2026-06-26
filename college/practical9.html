@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+<title>Form Validate</title> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<form onsubmit="return validateForm()"> 
+  <input type="text" id="firstName" placeholder="First Name"><br><br> 
+  <input type="text" id="lastName" placeholder="Last Name"><br><br> 
+  <input type="password" id="password" placeholder="Password"><br><br> 
+  <input type="text" id="email" placeholder="Email ID"><br><br> 
+  <input type="text" id="mobile" placeholder="Mobile Number"><br><br> 
+  <textarea id="address" placeholder="Address"></textarea><br><br> 
+  <button type="submit">Register</button> 
+</form> 
+</head> 
+<script>function validateForm() { 
+  var firstName = document.getElementById("firstName").value.trim(); 
+  var lastName = document.getElementById("lastName").value.trim(); 
+  var password = document.getElementById("password").value.trim(); 
+  var email = document.getElementById("email").value.trim(); 
+  var mobile = document.getElementById("mobile").value.trim(); 
+  var address = document.getElementById("address").value.trim(); 
+  
+  // First Name: Only alphabets, minimum 6 characters 
+  var firstNamePattern = /^[A-Za-z]{6,}$/; 
+  if (!firstNamePattern.test(firstName)) { 
+    alert("First Name must contain only alphabets and be at least 6 characters long."); 
+    return false; 
+  } 
+  
+  // Last Name: Not empty 
+  if (lastName === "") { 
+    alert("Last Name should not be empty."); 
+    return false; 
+  } 
+  
+  // Password: Minimum 6 characters 
+  if (password.length < 6) { 
+    alert("Password must be at least 6 characters long."); 
+    return false; 
+  } 
+  
+  // Email: Standard pattern name@domain.com 
+  var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/; 
+  if (!emailPattern.test(email)) { 
+    alert("Enter a valid Email ID (example: name@domain.com)."); 
+    return false; 
+  } 
+// Mobile Number: Exactly 10 digits 
+  var mobilePattern = /^[0-9]{10}$/; 
+  if (!mobilePattern.test(mobile)) { 
+    alert("Mobile Number must contain exactly 10 digits."); 
+    return false; 
+  } 
+  
+  // Address: Not empty 
+  if (address === "") { 
+    alert("Address should not be empty."); 
+    return false; 
+  } 
+  
+  alert("Registration Successful!"); 
+  return true; 
+} 
+</script> 

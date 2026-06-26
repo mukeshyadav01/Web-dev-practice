@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #167a96, #0072ff);
+    font-family: Arial, sans-serif;
+}
+.container {
+    background: rgb(247, 252, 185);
+    padding: 30px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+}
+h1 {
+    position: relative;
+}
+h1::before,
+h1::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background: #4bf074;
+    position: absolute;
+    top: 50%;
+}
+h1::before {
+    left: -40px;
+}
+h1::after {
+    right: -40px;
+}
+p {
+    color: #555;
+    line-height: 1.6;
+}
+p::first-letter {
+    font-size: 2em;
+    color: #0072ff;
+    font-weight: bold;
+}
+p::selection {
+    background: #0072ff;
+    color: white;
+}
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.features li:nth-child(odd) {
+    background: #aaebf0;
+}
+.features li:nth-child(even) {
+    background: #aaebf0;
+}
+.features li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+}
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+input:focus {
+    border-color: #0072ff;
+}
+button {
+    padding: 12px 30px;
+    background: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button:hover {
+    background: #0056cc;
+}
+button:active {
+    transform: scale(0.95);
+}

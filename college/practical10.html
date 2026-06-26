@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Factorial & Fibonacci Calculator</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(to right, #4e73df, #1cc88a); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        } 
+        .container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+            width: 400px; 
+            text-align: center; 
+        } 
+        h2 { 
+            margin-bottom: 20px; 
+        } 
+        .section { 
+            margin-bottom: 25px; 
+        } 
+        input { 
+            width: 80%; 
+            padding: 8px; 
+            margin: 10px 0; 
+            border-radius: 6px; 
+            border: 1px solid #ccc; 
+        } 
+        button { 
+            padding: 8px 18px; 
+            border: none; 
+            border-radius: 6px; 
+            background-color: #4e73df; 
+            color: white; 
+            cursor: pointer; 
+            font-size: 14px; 
+        } 
+        button:hover { 
+            background-color: #2e59d9; 
+        } 
+        .result { 
+            margin-top: 10px; 
+            font-weight: bold; 
+            word-wrap: break-word; 
+        } 
+    </style> 
+</head> 
+<body> 
+  
+<div class="container"> 
+    <h2>Math Calculator</h2> 
+    <!-- Factorial Section --> 
+    <div class="section"> 
+        <h3>Factorial</h3> 
+        <input type="number" id="factNum" placeholder="Enter a number" min="0"> 
+        <br> 
+        <button onclick="calculateFactorial()">Calculate</button> 
+        <div id="factResult" class="result"></div> 
+    </div> 
+    <!-- Fibonacci Section --> 
+    <div class="section"> 
+        <h3>Fibonacci Series</h3> 
+        <input type="number" id="fibNum" placeholder="Enter number of terms" min="1"> 
+        <br> 
+        <button onclick="generateFibonacci()">Generate</button> 
+        <div id="fibResult" class="result"></div> 
+    </div> 
+</div> 
+<script> 
+    // Factorial Function 
+    function calculateFactorial() { 
+        let n = document.getElementById("factNum").value; 
+        let result = document.getElementById("factResult"); 
+        if (n < 0 || n === "") { 
+            result.innerHTML = "Please enter a valid non-negative number."; 
+            return; 
+        } 
+        let factorial = 1; 
+        for (let i = 1; i <= n; i++) { 
+            factorial *= i; 
+        } 
+        result.innerHTML = "Factorial of " + n + " is " + factorial; 
+    } 
+  
+    // Fibonacci Function 
+    function generateFibonacci() { 
+        let n = document.getElementById("fibNum").value; 
+        let result = document.getElementById("fibResult"); 
+        if (n <= 0 || n === "") { 
+            result.innerHTML = "Please enter a valid positive number."; 
+            return; 
+        } 
+        let fibSeries = []; 
+        let a = 0, b = 1; 
+        for (let i = 0; i < n; i++) { 
+            fibSeries.push(a); 
+            let next = a + b; 
+            a = b; 
+            b = next; 
+        } 
+        result.innerHTML = fibSeries.join(", "); 
+    } 
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Prime Numbers from 1 to 100</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 50px; 
+        } 
+        h2 { 
+            color: darkblue; 
+        } 
+        #result { 
+            font-size: 18px; 
+            margin-top: 20px; 
+            color: green; 
+        } 
+        button { 
+            padding: 8px 15px; 
+            font-size: 16px; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h2>Prime Numbers Between 1 and 100</h2> 
+    <button onclick="showPrimes()">Display Prime Numbers</button> 
+    <div id="result"></div> 
+    <script> 
+        function showPrimes() { 
+            var result = "";  
+            for (var num = 2; num <= 100; num++) { 
+                var isPrime = true; 
+                for (var i = 2; i <= Math.sqrt(num); i++) { 
+                    if (num % i === 0) { 
+                        isPrime = false; 
+                        break; 
+                    } 
+                } 
+                if (isPrime) { 
+                    result += num + " "; 
+                } 
+            } 
+            document.getElementById("result").innerHTML = result; 
+        } 
+    </script> 
+</body> 
+</html> 

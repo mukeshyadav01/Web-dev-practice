@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+    <style>
+        div{
+          background-color: rgb(7, 118, 161);
+          margin-top:25px ;
+          padding: 20px;
+          border: 2px solid;  
+        }
+        h3{
+            color:red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: blueviolet;" >
+   <h1>DEMONSTRATING INLINE , INTERNAL AND EXTERNAL CSS</h1> 
+   <P style="font-size: 30px;">This page show the three ways to do a CSS</P>
+   <div style="background-color: rgb(153, 10, 118); border-radius: 5px; border: 2px solid;">
+    <h3 style="padding: 20px; color: aqua;">This box is style with INLINE CSS</h3>
+    <p style="color: red; padding: 20px;">the style is applied directly to the element using "style" attribute</p>
+   </div>
+   <div>
+   <h3>This box is style with INTERNAL CSS</h3> 
+   <p>The style are defined in a (style) block in the (head) of thiss document</p>
+   </div>
+   <div id="es">
+    <h3 class="muk">This box is styled with External css</h3>
+    <p>The style are loded from the 'style.css' file</p>
+   </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+h1{
+    background-color: aqua;
+    position: relative;
+    left: 200px;
+}
+/* .muk{
+    background-color: lightblue;
+}
+#kr{
+    background-color: red;
+} */
+*{
+    background-color: lightgreen;
+}

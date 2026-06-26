@@ -1,0 +1,35 @@
+/* selector :element */
+/* h1{
+    background-color: aqua;
+}
+li{
+    background-color: yellow;
+} */
+ /*  id based */
+ /* #ram{
+    background-color: red;
+} */
+
+ /* class based selection */
+/* .muk{
+    background-color: lightgreen;
+} */
+ *{
+    background-color:rgba(116, 102, 239, 0.595);
+ }
+ h1{
+    background-color: orange;
+    width: 170px;
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: blue; */
+    border: 10px solid green;
+    padding: 10px;
+    margin: 10px;
+ }
+ h2{
+    background-color: aqua;
+    width: 180px;
+    border: 2px solid red;
+    padding: 20px 20px;
+ }
