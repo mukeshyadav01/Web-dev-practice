@@ -42,6 +42,18 @@ let marks = [34,33,54,23];
 // console.log(arr3)
 
 // Converting array to string
-const names = ["Alice","Bob","Charlie"];
+// const names = ["Alice","Bob","Charlie","Anand","Bibek"];
 // console.log(names.toString())
-console.log(names.join("-"))
+// console.log(names.join("-"))
+// names.sort();
+// names.reverse();
+// console.log(names);
+
+// const a = [101,90,80,32,91];
+// a.sort((a,b)=> a-b);   
+// console.log(a);
+
+// flattering array
+const arr = [23,43,21,[54,97,99,[2,4,6,6]],11];
+const a = arr.flat(2)
+console.log(a)
