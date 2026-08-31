@@ -107,8 +107,10 @@ const user= {
 
 // Deep copy
 
-const user2 = structuredClone(user);
-user2.address.city="Deoria";
-console.log(user2)
+// const user2 = structuredClone(user);
+// user2.address.city="Deoria";
+// console.log(user2)
+
+
 // console.log(user) se user ke key aur value aate hai phir(.) se usake andar ke 
 // console.log(user.address.city)
